@@ -1,0 +1,26 @@
+.auth/
+.env
+.env.*
+!.env.example
+
+# Dependencias locais
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Artefatos
+test-results/
+playwright-report/
+playwright/.cache/
+blob-report/
+playwright-list-output.txt
+
+# Logs e arquivos loais
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/

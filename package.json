@@ -1,0 +1,22 @@
+{
+  "name": "playwright-saas-b2b-framework",
+  "version": "1.0.0",
+  "description": "Framework de Testes E2E Enterprise para SaaS B2B utilizando Playwright, TypeScript, A11y e Visual Regression.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:smoke": "playwright test tests/dashboard.spec.ts",
+    "test:regression": "playwright test tests/accessibility.spec.ts tests/visual-regression.spec.ts",
+    "test:report": "playwright show-report",
+    "test:update-snapshots": "playwright test --update-snapshots"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.0.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.0"
+  }
+}
