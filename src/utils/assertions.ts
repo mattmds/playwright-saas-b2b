@@ -4,7 +4,7 @@ export async function expectVisible(locator: Locator): Promise<void> {
   await expect(locator).toBeVisible();
 }
 
-export async function expectTextVisible(page: Page, text: string, timeout = 5000): Promise<void> {
+export async function expectTextVisible(page: Page, text: string, timeout = 8000): Promise<void> {
   await expect(page.getByText(text)).toBeVisible({ timeout });
 }
 

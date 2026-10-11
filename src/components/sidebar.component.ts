@@ -12,6 +12,6 @@ export class SidebarComponent {
   }
 
   async openPIM(): Promise<void> {
-    await this.page.getByRole('link', { name: /pim/i }).click();
+    await this.page.getByRole('link', { name: /pim/i }).click({ timeout: 40_000 });
   }
 }

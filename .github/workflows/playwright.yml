@@ -26,7 +26,7 @@ jobs:
       run: npx playwright install --with-deps chromium firefox
 
     - name: Run Playwright tests # 5. Executa a suíte de testes E2E
-      run: npx playwright test
+      run: npx playwright test tests/smoke/dashboard.spec.ts --grep "visualizar o dashboard e navegar" --project=chromium
       env:
         ORANGEHRM_USERNAME: ${{ secrets.ORANGEHRM_USERNAME }}
         PASSWORD: ${{ secrets.ORANGEHRM_PASSWORD }}

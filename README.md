@@ -4,7 +4,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)](https://www.typescriptlang.org/)
 [![A11y](https://img.shields.io/badge/A11y-Axe%20Playwright-orange)](https://github.com/dequelabs/axe-core-npm)
 
-Framework de automação E2E para aplicações SaaS/B2B, com foco em autenticação, smoke tests, regressão visual, acessibilidade e testes de resiliência.
+Framework de automação E2E para aplicações SaaS/B2B, foi usado como base o sistema opensource OrangeHRM, para a realização de testes como autenticação, smoke tests, regressão visual, acessibilidade e testes de resiliência
 
 ## Visão geral
 
@@ -243,7 +243,7 @@ Fluxo típico:
 
 ## Objetivo do projeto
 
-A proposta deste framework é servir como base para automação E2E em aplicações SaaS/B2B, com foco em:
+A proposta deste framework é servir como base para reproduzir recursos úteis e aplicados em projetos reais, que visam garantir:
 
 - estabilidade
 - reutilização
@@ -254,7 +254,4 @@ A proposta deste framework é servir como base para automação E2E em aplicaç�
 
 ---
 
-## Licença
-
-Este projeto foi desenvolvido como exemplo/estrutura de automação e pode ser adaptado para uso interno ou em repositórios públicos conforme a necessidade da equipe.
 

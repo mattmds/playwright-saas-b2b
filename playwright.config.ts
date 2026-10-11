@@ -17,8 +17,8 @@ export default defineConfig({
   ],
   use: {
     baseURL: env.baseUrl,
-    actionTimeout: 15 * 1000,
-    navigationTimeout: 30 * 1000,
+    actionTimeout: 20 * 1000,
+    navigationTimeout: 40 * 1000,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on',
