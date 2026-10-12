@@ -1,6 +1,6 @@
 name: Playwright E2E Tests
 
-on:
+on: # Define os gatilhos de execução (Dispara em Push e Pull Request para a branch principal)
   push:
     branches: [ main, master ]
   pull_request:
@@ -12,29 +12,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4 # 1. Baixa o código-fonte do repositório
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4 # 2. Configura o ambiente Node.js
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install dependencies # 3. Instala as dependências do package.json utilizando o cache
         run: npm ci
 
-      - name: Install Playwright Browsers
+      - name: Install Playwright Browsers # 4. Baixa e configura os navegadores do Playwright
         run: npx playwright install --with-deps chromium firefox
 
-      - name: Run Playwright tests
-        run: npx playwright test tests/smoke/dashboard.spec.ts --grep "visualizar o dashboard e navegar" --project=chromium
+      - name: Run Playwright tests # 5. Executa a suíte de testes E2E
+        run: npx playwright test tests/smoke/dashboard.spec.ts --project=chromium
         env:
           ORANGEHRM_USERNAME: ${{ secrets.ORANGEHRM_USERNAME }}
           PASSWORD: ${{ secrets.ORANGEHRM_PASSWORD }}
 
-      - name: Upload Playwright Report
+      - name: Upload Playwright Report # 6. Salva e anexa o relatório HTML como artefato da build
         uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() }} # Executa mesmo se os testes falharem ou forem cancelados
         with:
           name: playwright-report
           path: playwright-report/
+          if-no-files-found: ignore # Impede que o workflow quebre na etapa de upload se a pasta não for gerada
           retention-days: 30
