@@ -31,7 +31,7 @@ jobs:
         run: npx playwright test tests/smoke/dashboard.spec.ts --project=chromium
         env:
           ORANGEHRM_USERNAME: ${{ secrets.ORANGEHRM_USERNAME }}
-          PASSWORD: ${{ secrets.ORANGEHRM_PASSWORD }}
+          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Upload Playwright Report # 6. Salva e anexa o relatório HTML como artefato da build
         uses: actions/upload-artifact@v4
