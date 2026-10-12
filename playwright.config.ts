@@ -21,7 +21,7 @@ export default defineConfig({
     navigationTimeout: 40 * 1000,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'on',
+    video: 'retain-on-failure',
   },
   expect: {
     toHaveScreenshot: {

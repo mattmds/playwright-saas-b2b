@@ -4,11 +4,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)](https://www.typescriptlang.org/)
 [![A11y](https://img.shields.io/badge/A11y-Axe%20Playwright-orange)](https://github.com/dequelabs/axe-core-npm)
 
-Framework de automação E2E para aplicações SaaS/B2B, foi usado como base o sistema opensource OrangeHRM, para a realização de testes como autenticação, smoke tests, regressão visual, acessibilidade e testes de resiliência
+Framework de automação E2E para aplicações SaaS/B2B, foi usado como base o sistema opensource OrangeHRM, para a realização de testes como autenticação, cenários E2E, regressão visual, acessibilidade e testes de resiliência
 
 ## Visão geral
 
-Este projeto foi estruturado para funcionar como uma base profissional de automação com Playwright + TypeScript, seguindo boas práticas de arquitetura e manutenção:
+Este projeto foi estruturado visando aplicação de recursos específicos de automação com Playwright + TypeScript, seguindo boas práticas de arquitetura e manutenção:
 
 - Page Object Model (POM)
 - fixtures reutilizáveis
@@ -25,7 +25,7 @@ Este projeto foi estruturado para funcionar como uma base profissional de automa
 
 - Reuso de sessão: a autenticação é realizada uma vez e reaproveitada pela suíte.
 - Estrutura por domínio: páginas, fixtures, utilitários e configuração ficam separados por responsabilidade.
-- Cobertura em múltiplos níveis: smoke, regressão visual, acessibilidade e testes de falha de rede.
+- Cobertura em múltiplos níveis: E2E, regressão visual, acessibilidade e testes de falha de rede.
 - Configuração segura: credenciais e URL base são lidas por variáveis de ambiente.
 - Seletores mais resilientes: locators centralizados e priorizando acessibilidade e semântica.
 
@@ -161,6 +161,12 @@ npx playwright test
 npm run test:headed
 ```
 
+### Execução de teste específico com trace e navegador específico
+
+```bash
+npx playwright test tests/smoke/dashboard.spec.ts --project=firefox --trace on --workers=1 --retries=0
+```
+
 ### UI mode
 
 ```bash
@@ -203,7 +209,7 @@ npm run test:update-snapshots
 
 ### Smoke
 
-Valida os fluxos principais do usuário, como autenticação e navegação crítica no dashboard.
+Valida os fluxos de usuário, como autenticação e navegação crítica no dashboard.
 
 ### Regression
 

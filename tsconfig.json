@@ -27,7 +27,6 @@
     "forceConsistentCasingInFileNames": true,
 
     /* Aliases de Caminho */
-    "baseUrl": ".",
     "paths": {
       "@api/*": ["./src/api/*"],
       "@config/*": ["./src/config/*"],
