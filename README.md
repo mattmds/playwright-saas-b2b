@@ -23,7 +23,7 @@ Este projeto foi estruturado visando aplicação de recursos específicos de aut
 
 ### Diferenciais principais
 
-- Reuso de sessão: a autenticação é realizada uma vez e reaproveitada pela suíte.
+- Reuso de sessão: a autenticação é realizada uma vez e reaproveitada.
 - Estrutura por domínio: páginas, fixtures, utilitários e configuração ficam separados por responsabilidade.
 - Cobertura em múltiplos níveis: E2E, regressão visual, acessibilidade e testes de falha de rede.
 - Configuração segura: credenciais e URL base são lidas por variáveis de ambiente.
