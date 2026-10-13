@@ -1,4 +1,4 @@
-# Playwright SaaS B2B Test Automation Framework
+# SaaS B2B com Playwright 
 
 [![Playwright](https://img.shields.io/badge/Playwright-1.48-green)](https://playwright.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)](https://www.typescriptlang.org/)
