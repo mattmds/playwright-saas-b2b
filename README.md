@@ -202,7 +202,7 @@ Confirma que o título do dashboard aparece, abre o módulo PIM pelo menu e vali
 
 ### Smoke: busca de funcionário
 
-Abre o PIM, pesquisa por `Glinda` e confirma que uma linha correspondente aparece na tabela.
+Abre o PIM, pesquisa por um funcionário e confirma que uma linha correspondente aparece na tabela.
 
 ### Resiliência de API
 
