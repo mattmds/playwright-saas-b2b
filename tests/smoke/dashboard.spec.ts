@@ -32,11 +32,11 @@ test.describe('Smoke - Dashboard', () => {
     });
 
     await test.step('filtrar funcionário', async () => {
-      await dashboardPage.filterEmployeeByName('Linda Turner');
+      await dashboardPage.filterEmployeeByName('Glinda');
     });
 
     await test.step('validar linha da tabela', async () => {
-      const row = await dashboardPage.getTableRowByName('Linda Turner');
+      const row = await dashboardPage.getTableRowByName('Glinda');
       await expectVisible(row);
     });
   });

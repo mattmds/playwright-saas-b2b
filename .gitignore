@@ -15,6 +15,7 @@ playwright-report/
 playwright/.cache/
 blob-report/
 playwright-list-output.txt
+visual-regression.spec.ts-snapshots/
 
 # Logs e arquivos loais
 *.log
